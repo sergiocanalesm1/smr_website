@@ -1,0 +1,83 @@
+.menu{
+    background-color: #A7CE39;
+    padding-top: 20%;
+    padding-left: 10%;
+    padding-bottom: 20%;
+    padding-right: 10%;
+    display:none;
+    
+}
+.start{
+    background-color: #A7CE39 ;
+    
+    padding-top: 20%;
+    padding-left: 10%;
+    padding-bottom: 20%;
+    padding-right: 10%;
+}
+.start img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: solid;
+    border-color: white;
+    padding:10px;
+    border-radius: 10%;
+}
+.quote{
+    margin-top: 5%;
+    color: white;
+    text-align: center;
+    font-style: italic;
+    font-size: large;
+    opacity: 0;
+}
+.quote-name{
+    color: white;
+    text-align: center;
+    font-size: large;
+    padding-left: 35%;
+    opacity:0;
+}
+
+.menu a{
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 200%;
+    font-weight: bold;
+    text-align: center;
+}
+.identity{
+    /*background-image: url("https://www.impo.com.uy/revista/wp-content/uploads/2017/05/Foto-5.jpg");*/
+    display: none;
+}
+.banner{
+    background-color:#A7CE39;
+    padding-left:1%;
+    padding-right:1%;
+}
+.banner input{
+    height:40px;
+    width: 40px;
+}
+.banner img{
+    height:40px;
+    width: 50px;
+    float:right;
+}
+.svg-container {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%; /* aspect ratio */
+    vertical-align: top;
+    overflow: hidden;
+    background-color: #A7CE39;
+  }
+  .svg-content-responsive {
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    left: 0;
+  }
+  
