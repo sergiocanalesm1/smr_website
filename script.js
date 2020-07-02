@@ -1,43 +1,13 @@
 
 show_start();//show logo and remove
-//add_logo_on_banner();
-/*
-function add_logo_on_banner(){
-    //document.getElementById("#banner");
-    let row = document.createElement("div");
-    let col_class = "col-xl-12";
-    row.className = "row";
-    let col = document.createElement("div")
-    col.className = col_class;
-    let input = document.createElement("INPUT");
-    input
-        .setAttribute("id","menu-btn")
-        .setAttribute("type","image")
-        .setAttribute("src","media/menu.png")
-        .setAttribute("alt","menu")
-        ; 
-    col.appendChild(input);
-    row.appendChild(col);
-    for(let i=0;i<10;i++){
-        col = document.createElement("div");
-        col.className = col_class;
-        row.appendChild(col);
-    }
-    let col = document.createElement("div")
-    col.className = col_class;
-    let img = document.createElement("IMG")
-    img
-        .setAttribute("src","media/logo.png");
-        //classname?
-    col.appendChild(img);
-    row.appendChild(col);
-    document.getElementById("#banner").appendChild(row);
-}
-*/
+
+let btn_menu = d3.select("#menu-btn");
+
+
 
 function show_start() {
     let div_start = d3.select("#start");
-    const t_time = 2000;//ponerlo en 2000
+    const t_time = 2;//ponerlo en 2000
 
     let img = div_start.append("img").attr("src", "media/logo.png").style("opacity", 0);
     let quote = div_start.append("p").text('"Talent wins games, but teamwork and intelligence wins championships"').attr("class","quote");
@@ -58,10 +28,7 @@ function show_start() {
     });
 }
 
-
-let btn_menu = d3.select("#menu-btn");
-    
-btn_menu.on("click",function(){ //display menu
+btn_menu.on("click",function(){//display menu when clicked
     let t_time = 1500;
     let div_menu = d3.select("#menu-click")
         .append("div")
@@ -85,6 +52,10 @@ btn_menu.on("click",function(){ //display menu
         .on("mouseout",function(d){
             d3.select(this).style("opacity",'1');          
         })
+        .on("click",function(d){
+            d3.select("#identity");
+        })
+        ;
         ;
     let p2 = div_menu.append("text")
         .text("¿Qué servicios ofrecemos?")
@@ -105,10 +76,7 @@ btn_menu.on("click",function(){ //display menu
         .on("mouseout",function(d){
             d3.select(this).style("opacity",'1');          
         })
-        .on("click",function(d){
-            d3.select("#identity");
-        })
-        ;
+
     let p4 = div_menu.append("text")
         .text("Más sobre la empresa")
         .style("fill","white")
@@ -144,8 +112,71 @@ btn_menu.on("click",function(){ //display menu
         .attr("x",200)
         .attr("y",160)
         ;
-
+    btn_menu.on("click",function(){
+        p1.transition()
+            .duration(t_time)
+            .ease(d3.easeCubic)
+            .attr("x",0)
+            .attr("y",0)
+            ;
+        p2.transition()
+            .duration(t_time)
+            .ease(d3.easeCubic)
+            .attr("x",0)
+            .attr("y",0)
+            ;
+        p3.transition()
+            .duration(t_time)
+            .ease(d3.easeCubic)
+            .attr("x",0)
+            .attr("y",0)
+            ;
+        p4.transition()
+            .duration(t_time)
+            .ease(d3.easeCubic)
+            .attr("x",0)
+            .attr("y",0).on("end",function(){
+            d3.select("#menu-click").remove();
+            })
+            ;
+    });
+});
+    
 
     
-})
+
+//add_logo_on_banner();
+/*
+function add_logo_on_banner(){
+    //document.getElementById("#banner");
+    let row = document.createElement("div");
+    let col_class = "col-xl-12";
+    row.className = "row";
+    let col = document.createElement("div")
+    col.className = col_class;
+    let input = document.createElement("INPUT");
+    input
+        .setAttribute("id","menu-btn")
+        .setAttribute("type","image")
+        .setAttribute("src","media/menu.png")
+        .setAttribute("alt","menu")
+        ; 
+    col.appendChild(input);
+    row.appendChild(col);
+    for(let i=0;i<10;i++){
+        col = document.createElement("div");
+        col.className = col_class;
+        row.appendChild(col);
+    }
+    let col = document.createElement("div")
+    col.className = col_class;
+    let img = document.createElement("IMG")
+    img
+        .setAttribute("src","media/logo.png");
+        //classname?
+    col.appendChild(img);
+    row.appendChild(col);
+    document.getElementById("#banner").appendChild(row);
+}
+*/
 
