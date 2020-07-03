@@ -7,7 +7,7 @@ let btn_menu = d3.select("#menu-btn");
 
 function show_start() {
     let div_start = d3.select("#start");
-    const t_time = 2;//ponerlo en 2000
+    const t_time = 2000;//ponerlo en 2000
 
     let img = div_start.append("img").attr("src", "media/logo.png").style("opacity", 0);
     let quote = div_start.append("p").text('"Talent wins games, but teamwork and intelligence wins championships"').attr("class","quote");
