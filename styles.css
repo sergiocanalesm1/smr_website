@@ -62,10 +62,11 @@
     width: 40px;
 }
 .banner img{
-    padding-top: 5%;
+    padding-top: 3%;
     height:40px;
     width: 50px;
     float:right;
+    padding-bottom: 3%;
 }
 .svg-container {
     display: inline-block;

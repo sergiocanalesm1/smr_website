@@ -32,12 +32,45 @@ function show_start() {
         },t_time);       
     });
 }
-let data = ["Más sobre la empresa"];
-btn_menu.on("click",function(){//display menu when clicked, falta que  se pueda poner muchas  veces..
+function transitionBack(p1,p2,p4,t_time,id){
+    p1.transition()
+                .duration(t_time)
+                .ease(d3.easeCubic)
+                .attr("x",0)
+                .attr("y",0)
+                ;
+            p2.transition()
+                .duration(t_time)
+                .ease(d3.easeCubic)
+                .attr("x",0)
+                .attr("y",0)
+                ;
+            /*
+            p3.transition()
+                .duration(t_time)
+                .ease(d3.easeCubic)
+                .attr("x",0)
+                .attr("y",0)
+                ;
+            */
+            p4.transition()
+                .duration(t_time)
+                .ease(d3.easeCubic)
+                .attr("x",0)
+                .attr("y",0)
+                .on("end",function(){
+                d3.select("#menuClick").remove();
+                d3.select("#content").style("display","block");
+                })
+                ;                        
+    }
+btn_menu.on("click",function(){//display menu when clicked
     let t_time = 1500;
+    
     let content = d3.select("#content")
     if(content.style("display")!="none"){
         content.style("display","none");//hide everything
+        
         let div_menu = body.append("div")
             .attr("id","menuClick")
             .classed("svg-container",true)
@@ -47,61 +80,80 @@ btn_menu.on("click",function(){//display menu when clicked, falta que  se pueda 
             .classed("svg-content-responsive", true)
             ;
 
+
+        div_menu.append("svg:image")
+        .style("margin-left","10%")
+        .style("padding-top","3%")
+        .style("opacity","1")
+        .attr('width', "15px")
+        .attr('height', "15px")
+        .attr("xlink:href", "media/menu.png")
+        .on("mouseover",function(){
+            d3.select(this).style("opacity",'0.4');          
+        })
+        .on("mouseout",function(){
+            d3.select(this).style("opacity",'1');          
+        })
+        .on("click",function(){
+            transitionBack(p1,p2,p4,t_time,"#principal");
+        })
+        ;
         let p1 = div_menu.append("text")
             .text("¿Qué es SMR Abogados?")
             .style("fill","white")
-            .on("mouseover",function(d){
+            .on("mouseover",function(){
                 d3.select(this).style("opacity",'0.7');          
             })
-            .on("mouseout",function(d){
-                d3.select(this).style("opacity",'1');          
-            })
-            .on("click",function(d){
-                d3.select("#menuClick").remove();
-                d3.select("#content").style("display","block");
-            })
-            ;
-            ;
-        let p2 = div_menu.append("text")
-            .text("¿Qué servicios ofrecemos?")
-            .style("fill","white")
-            .on("mouseover",function(d){
-                d3.select(this).style("opacity",'0.7');          
-            })
-            .on("mouseout",function(d){
+            .on("mouseout",function(){
                 d3.select(this).style("opacity",'1');          
             })
             .on("click",function(){
-                let services = d3.select("#servicios");
-                div_menu.remove();
+                transitionBack(p1,p2,p4,t_time,"#principal");
             })
             ;
+            
+        let p2 = div_menu.append("text")
+            .text("¿Qué servicios ofrecemos?")
+            .style("fill","white")
+            .on("mouseover",function(){
+                d3.select(this).style("opacity",'0.7');          
+            })
+            .on("mouseout",function(){
+                d3.select(this).style("opacity",'1');          
+            })
+            .on("click",function(){
+                transitionBack(p1,p2,p4,t_time,"#servicios");
+            })
+            ;
+            /*
         let p3 = div_menu.append("text")
             .text("¿Quiénes son nuestros clientes?")
             .style("fill","white")
-            .on("mouseover",function(d){
+            .on("mouseover",function(){
                 d3.select(this).style("opacity",'0.7');          
             })
-            .on("mouseout",function(d){
+            .on("mouseout",function(){
                 d3.select(this).style("opacity",'1');          
             })
-
-        let p4 = div_menu.append("svg")
-            //.text("Más sobre la empresa")
-            .attr("xlink:href","#mas")
+            .on("click",function(){
+                transitionBack(p1,p2,p3,p4,t_time,"#servicios");
+            })
+            */
+        
+        let p4 = div_menu.append("text")
+            .text("Más sobre la empresa")
             .style("fill","white")
-            .on("mouseover",function(d){
+            .on("mouseover",function(){
                 d3.select(this).style("opacity",'0.7');          
             })
-            .data(data)
-            .enter().append("a")
-            .on("mouseout",function(d){
+            .on("mouseout",function(){
                 d3.select(this).style("opacity",'1');          
             })
-            
-
+            .on("click",function(){
+                transitionBack(p1,p2,p4,t_time,"#mas");
+            })
             ;
-
+        
         p1.transition()
             .duration(t_time)
             .ease(d3.easeCubic)
@@ -114,19 +166,21 @@ btn_menu.on("click",function(){//display menu when clicked, falta que  se pueda 
             .attr("x",200)
             .attr("y",120)
             ;
+        /*
         p3.transition()
             .duration(t_time)
             .ease(d3.easeCubic)
             .attr("x",200)
             .attr("y",140)
             ;
+        */
         p4.transition()
             .duration(t_time)
             .ease(d3.easeCubic)
             .attr("x",200)
-            .attr("y",160)
+            .attr("y",140)
             ;
-    }
+    }/*
     else{
         btn_menu.on("click",function(){
             p1.transition()
@@ -141,12 +195,14 @@ btn_menu.on("click",function(){//display menu when clicked, falta que  se pueda 
                 .attr("x",0)
                 .attr("y",0)
                 ;
+            /*
             p3.transition()
                 .duration(t_time)
                 .ease(d3.easeCubic)
                 .attr("x",0)
                 .attr("y",0)
                 ;
+                
             p4.transition()
                 .duration(t_time)
                 .ease(d3.easeCubic)
@@ -158,6 +214,7 @@ btn_menu.on("click",function(){//display menu when clicked, falta que  se pueda 
                 ;
         });
     }
+        */
     
     
 });
