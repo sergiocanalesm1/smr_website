@@ -1,12 +1,4 @@
-.menu{
-    background-color: #A7CE39;
-    padding-top: 20%;
-    padding-left: 10%;
-    padding-bottom: 20%;
-    padding-right: 10%;
-    display:none;
-    
-}
+
 .start{
     background-color: #A7CE39 ;
     
@@ -39,34 +31,38 @@
     padding-left: 35%;
     opacity:0;
 }
+.quoteJ{
+  margin-top: 5%;
+  color: #32363A;
+  text-align: center;
+  font-style: italic;
+  font-size: large;
+}
+.quote-nameJ{
+  color:#32363A;
+  text-align: center;
+  font-size: large;
+  float:right;
+}
 
-.menu a{
-    color:white;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 200%;
-    font-weight: bold;
-    text-align: center;
-}
-.identity{
-    /*background-image: url("https://www.impo.com.uy/revista/wp-content/uploads/2017/05/Foto-5.jpg");*/
-    display: none;
-}
 .banner{
-    background-color:#A7CE39;
+    background-color:white;
     padding-left:1%;
     padding-right:1%;
     width:100%;
-    /*
     top: 0;
     left: 0;
     position: fixed;
-    */
+    border-style: solid;
+    border-color: #A7CE39;
+    z-index: 2;
 }
 .banner input{
     height:40px;
     width: 40px;
 }
 .banner img{
+    padding-top: 5%;
     height:40px;
     width: 50px;
     float:right;
@@ -80,46 +76,124 @@
     overflow: hidden;
     background-color: #A7CE39;
   }
-  .svg-content-responsive {
-    display: inline-block;
-    position: absolute;
-    top: 10px;
-    left: 0;
-  }
-  .principal{
-    
-    width: 100%;
-    height: 800px;
-    background: url("media/outsourcing.jpg")  no-repeat center fixed;     
-    background-size: cover;
-    position: relative;
-    
-  }
-  .img-principal{
-      /*
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 3%;
-    margin-bottom: 3%;
-    height:40%;
-    width: 60%;
-    border-radius: 20%;
-    display: block;
-    position: relative;
-    */
-    
-  }
-  .preguntas{
-    text-align: center;
-    font-weight: bold;
-    padding-top: 30px;
-    color: #32363A;
-  }
-  .principal h3{
-    position: absolute;
-    bottom: 10px;
-    color: #32363A;
-    padding:20px;
-  }
+.svg-content-responsive {
+  display: inline-block;
+  position: absolute;
+  top: 10px;
+  left: 0;
+}
+.first-info{
+  margin: 3%;
+  color: #32363A;
+  font-size: 150%;
+  padding-top: 5%;
+}
 
+.preguntas{
+  text-align: center;
+  font-weight: bold;
+  color: #32363A;
+  border-style: solid;
+  border-radius: 5%;
+
+  margin-top: 5%;
+}
+
+.contacto{
+  margin-top: 5px;
+  border-style: solid;
+  border-radius: 2%;
+  border-color: #A7CE39;
+}
+.info-contacto{
+  margin-top: 5px;
+  border-style: solid;
+  border-radius: 2%;
+  border-color: #A7CE39;
+  text-align: center;
+  color: #32363A;
+}
+
+.first{
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  min-height: 600px;
+  margin-top: 3%;
+  background: url("media/outsourcing.jpg") center center /cover no-repeat;
+}
+.p-top{
+  padding-top: 1%;
+  text-align: center;
+  font-weight: bold;
+  color: #32363A;
+  font-size: 250%;
+}
+.first span{
+  position: absolute;
+  bottom: 0;
+  font-weight: bold;
+  color: #32363A;
+  font-size: 150%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+ 
+}
+.nomServicios{
+  color: #32363A;
+  text-align: center;
+}
+.nomServicios:hover{
+  color:#A7CE39;
+}
+.detailServicios{
+  text-align: center;
+  color: #32363A;
+  margin-top: 5%;
+  font-weight:lighter ;
+}
+.imgServicios{
+  width: 40%;
+  height:170%;
+  transform: rotate(270deg);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -60px;
+  
+}
+
+.carImg{
+  transform: rotate(270deg);
+  width: 100%;
+  height: 100%;
+  margin-top: -10px;
+}
+.carImgOffset{
+  margin-top: -65px;
+}
+.car{
+  margin-left: 15%;
+  margin-right: 15%;
+  width:400px;
+  height:400px;
+  
+}
+.accordion h5{
+  text-align: center;
+}
+.cultura{
+  padding: 1%;
+  padding-left:3%;
+  background-color: white;
+  font-size: 150%;
+  color: #32363A;
+  border-style: solid;  
+  border-radius: 5%;
+  border-color: #A7CE39;
+}
+hr {
+  margin-left: 3%;
+  margin-right: 3%;
+}
   

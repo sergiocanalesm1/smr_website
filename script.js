@@ -2,144 +2,164 @@
 show_start();//show logo and remove
 
 let btn_menu = d3.select("#menu-btn");
+let body = d3.select("body");
 
 
 
 function show_start() {
-    let div_start = d3.select("#start");
-    const t_time = 2000;//ponerlo en 2000
+    
+    const t_time = 2;//ponerlo en 2000
+    let div_start = d3.select("#start")
+    let content = d3.select("#content").style("display","none");//hide everything
+    
 
     let img = div_start.append("img").attr("src", "media/logo.png").style("opacity", 0);
     let quote = div_start.append("p").text('"Talent wins games, but teamwork and intelligence wins championships"').attr("class","quote");
-    let quote_name = div_start.append("p").text("-Michael Jordan").attr("class","quote-name");
+    let quote_name = div_start.append("p").text("Michael Jordan").attr("class","quote-name");
 
     //fade in
     img.transition().duration(t_time).ease(d3.easeLinear).style("opacity", 1);
     quote.transition().duration(t_time).ease(d3.easeLinear).style("opacity",1);
     quote_name.transition().duration(t_time).ease(d3.easeLinear).style("opacity",1).on("end",function(){
     //fade out
-        setTimeout(function(){//hold and then remove
+        setTimeout(function(){//hold and then remove and show everything else
             img.transition().duration(t_time).ease(d3.easeLinear).style("opacity", 0);
             quote.transition().duration(t_time).ease(d3.easeLinear).style("opacity",0);
             quote_name.transition().duration(t_time).ease(d3.easeLinear).style("opacity",0).on("end",function(){
                 div_start.remove();
+                content.style("display","block");
             });
         },t_time);       
     });
 }
-
-btn_menu.on("click",function(){//display menu when clicked
+let data = ["Más sobre la empresa"];
+btn_menu.on("click",function(){//display menu when clicked, falta que  se pueda poner muchas  veces..
     let t_time = 1500;
-    let div_menu = d3.select("#menu-click")
-        .append("div")
-        .classed("svg-container",true)
-        .append("svg")
-        .attr("preserveAspectRatio", "xMinYMin meet")
-        .attr("viewBox", "0 0 600 400")
-        .classed("svg-content-responsive", true)
-        ;
-    div_menu.append("a")
-        .attr("xlink:href", "#identity")
-        .attr("x",200)
-        .attr("y",100)
-        ;
-    let p1 = div_menu.append("text")
-        .text("¿Qué es SMR Abogados?")
-        .style("fill","white")
-        .on("mouseover",function(d){
-            d3.select(this).style("opacity",'0.7');          
-        })
-        .on("mouseout",function(d){
-            d3.select(this).style("opacity",'1');          
-        })
-        .on("click",function(d){
-            d3.select("#identity");
-        })
-        ;
-        ;
-    let p2 = div_menu.append("text")
-        .text("¿Qué servicios ofrecemos?")
-        .style("fill","white")
-        .on("mouseover",function(d){
-            d3.select(this).style("opacity",'0.7');          
-        })
-        .on("mouseout",function(d){
-            d3.select(this).style("opacity",'1');          
-        })
-        ;
-    let p3 = div_menu.append("text")
-        .text("¿Quiénes son nuestros clientes?")
-        .style("fill","white")
-        .on("mouseover",function(d){
-            d3.select(this).style("opacity",'0.7');          
-        })
-        .on("mouseout",function(d){
-            d3.select(this).style("opacity",'1');          
-        })
+    let content = d3.select("#content")
+    if(content.style("display")!="none"){
+        content.style("display","none");//hide everything
+        let div_menu = body.append("div")
+            .attr("id","menuClick")
+            .classed("svg-container",true)
+            .append("svg")
+            .attr("preserveAspectRatio", "xMinYMin meet")
+            .attr("viewBox", "0 0 600 400")
+            .classed("svg-content-responsive", true)
+            ;
 
-    let p4 = div_menu.append("text")
-        .text("Más sobre la empresa")
-        .style("fill","white")
-        .on("mouseover",function(d){
-            d3.select(this).style("opacity",'0.7');          
-        })
-        .on("mouseout",function(d){
-            d3.select(this).style("opacity",'1');          
-        })
-        ;
+        let p1 = div_menu.append("text")
+            .text("¿Qué es SMR Abogados?")
+            .style("fill","white")
+            .on("mouseover",function(d){
+                d3.select(this).style("opacity",'0.7');          
+            })
+            .on("mouseout",function(d){
+                d3.select(this).style("opacity",'1');          
+            })
+            .on("click",function(d){
+                d3.select("#menuClick").remove();
+                d3.select("#content").style("display","block");
+            })
+            ;
+            ;
+        let p2 = div_menu.append("text")
+            .text("¿Qué servicios ofrecemos?")
+            .style("fill","white")
+            .on("mouseover",function(d){
+                d3.select(this).style("opacity",'0.7');          
+            })
+            .on("mouseout",function(d){
+                d3.select(this).style("opacity",'1');          
+            })
+            .on("click",function(){
+                let services = d3.select("#servicios");
+                div_menu.remove();
+            })
+            ;
+        let p3 = div_menu.append("text")
+            .text("¿Quiénes son nuestros clientes?")
+            .style("fill","white")
+            .on("mouseover",function(d){
+                d3.select(this).style("opacity",'0.7');          
+            })
+            .on("mouseout",function(d){
+                d3.select(this).style("opacity",'1');          
+            })
 
-    p1.transition()
-        .duration(t_time)
-        .ease(d3.easeCubic)
-        .attr("x",200)
-        .attr("y",100)
-        ;
-    p2.transition()
-        .duration(t_time)
-        .ease(d3.easeCubic)
-        .attr("x",200)
-        .attr("y",120)
-        ;
-    p3.transition()
-        .duration(t_time)
-        .ease(d3.easeCubic)
-        .attr("x",200)
-        .attr("y",140)
-        ;
-    p4.transition()
-        .duration(t_time)
-        .ease(d3.easeCubic)
-        .attr("x",200)
-        .attr("y",160)
-        ;
-    btn_menu.on("click",function(){
+        let p4 = div_menu.append("svg")
+            //.text("Más sobre la empresa")
+            .attr("xlink:href","#mas")
+            .style("fill","white")
+            .on("mouseover",function(d){
+                d3.select(this).style("opacity",'0.7');          
+            })
+            .data(data)
+            .enter().append("a")
+            .on("mouseout",function(d){
+                d3.select(this).style("opacity",'1');          
+            })
+            
+
+            ;
+
         p1.transition()
             .duration(t_time)
             .ease(d3.easeCubic)
-            .attr("x",0)
-            .attr("y",0)
+            .attr("x",200)
+            .attr("y",100)
             ;
         p2.transition()
             .duration(t_time)
             .ease(d3.easeCubic)
-            .attr("x",0)
-            .attr("y",0)
+            .attr("x",200)
+            .attr("y",120)
             ;
         p3.transition()
             .duration(t_time)
             .ease(d3.easeCubic)
-            .attr("x",0)
-            .attr("y",0)
+            .attr("x",200)
+            .attr("y",140)
             ;
         p4.transition()
             .duration(t_time)
             .ease(d3.easeCubic)
-            .attr("x",0)
-            .attr("y",0).on("end",function(){
-            d3.select("#menu-click").remove();
-            })
+            .attr("x",200)
+            .attr("y",160)
             ;
-    });
+    }
+    else{
+        btn_menu.on("click",function(){
+            p1.transition()
+                .duration(t_time)
+                .ease(d3.easeCubic)
+                .attr("x",0)
+                .attr("y",0)
+                ;
+            p2.transition()
+                .duration(t_time)
+                .ease(d3.easeCubic)
+                .attr("x",0)
+                .attr("y",0)
+                ;
+            p3.transition()
+                .duration(t_time)
+                .ease(d3.easeCubic)
+                .attr("x",0)
+                .attr("y",0)
+                ;
+            p4.transition()
+                .duration(t_time)
+                .ease(d3.easeCubic)
+                .attr("x",0)
+                .attr("y",0).on("end",function(){
+                d3.select("#menuClick").remove();
+                content.style("display","block");
+                })
+                ;
+        });
+    }
+    
+    
 });
     
 
