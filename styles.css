@@ -127,6 +127,20 @@
   min-height: 600px;
   margin-top: 3%;
   background: url("media/outsourcing.jpg") center center /cover no-repeat;
+  display: block;
+}
+.first-sm{
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  min-height: 600px;
+  margin-top: 3%;
+  background: url("media/outsourcing.jpg") center center /cover no-repeat;
+  display: block;
+}
+#outsourcing-sm{
+  width: 100%;
+  height: 100%;
 }
 .p-top{
   padding-top: 1%;
@@ -135,7 +149,16 @@
   color: #32363A;
   font-size: 250%;
 }
-.first span{
+.p-top-sm{
+  margin-top: 10%;
+  padding-top: 1%;
+  text-align: center;
+  font-weight: bold;
+  color: #32363A;
+  font-size: 250%;
+}
+
+.p-bot{
   position: absolute;
   bottom: 0;
   font-weight: bold;
