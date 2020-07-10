@@ -44,7 +44,12 @@
   font-size: large;
   float:right;
 }
-
+#menu-btn:hover{
+  opacity:0.6;
+}
+#logo:hover{
+  opacity:0.8;
+}
 .banner{
     background-color:white;
     padding-left:1%;

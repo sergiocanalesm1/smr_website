@@ -96,9 +96,9 @@ function transitionFor(){
         div_menu.append("svg:image")
         .style("padding","10%")
         .style("opacity","1")
-        .attr('width', "15px")
-        .attr('height', "15px")
-        .attr("xlink:href", "media/back.JPG")
+        .attr('width', "25px")
+        .attr('height', "25px")
+        .attr("xlink:href", "media/back.png")
         .on("mouseover",function(){
             d3.select(this).style("opacity",'0.4');          
         })
