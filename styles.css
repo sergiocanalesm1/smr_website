@@ -171,6 +171,17 @@
   margin-top: -60px;
   
 }
+#img-asesoria-sm{
+  width: 70%;
+  height:170%;
+  transform: rotate(270deg);
+  display: block;
+  
+  margin-bottom: 3%;
+  padding-bottom: 3%;
+  
+  
+}
 #img-procesos-judiciales{
   width:70%;
   height:100%;
@@ -178,6 +189,15 @@
   margin-right: 8%;
   float: right;
 }
+#img-procesos-judiciales-sm{
+  width:130%;
+  height:130%;
+  padding: 3%;
+  margin-right: 10px;
+  padding-right: 10px;
+  
+}
+
 #img-estudio-titulos{
   width: 60%;
   height:150%;
@@ -189,6 +209,15 @@
   padding: 3%;
   
 }
+#img-estudio-titulos-sm{
+  width: 120%;
+  height:190%;
+  transform: rotate(270deg);
+  display: block;
+  
+  padding: 3%;
+}
+
 .mas{
   padding-top: 3%;
 }

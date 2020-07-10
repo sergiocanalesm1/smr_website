@@ -69,7 +69,7 @@ function transitionBack(p1,p2,p4,t_time,id){
     }
 
 btn_menu.on("click",function(){//display menu when clicked
-    window.location.href="#principal";
+    window.location.href="#content";
     setTimeout(function(){
         transitionFor()
     },50);
@@ -77,7 +77,7 @@ btn_menu.on("click",function(){//display menu when clicked
 });
 function transitionFor(){
     
-    window.location.href="#principal";
+    window.location.href="#content";
     let t_time = 1500;
     let content = d3.select("#content")
     if(content.style("display")!="none"){
@@ -106,7 +106,7 @@ function transitionFor(){
             d3.select(this).style("opacity",'1');          
         })
         .on("click",function(){
-            transitionBack(p1,p2,p4,t_time,"#principal");
+            transitionBack(p1,p2,p4,t_time,"#content");
         })
         ;
         let p1 = div_menu.append("text")
@@ -119,7 +119,7 @@ function transitionFor(){
                 d3.select(this).style("opacity",'1');          
             })
             .on("click",function(){
-                transitionBack(p1,p2,p4,t_time,"#principal");
+                transitionBack(p1,p2,p4,t_time,"#content");
             })
             ;
             
