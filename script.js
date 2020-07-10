@@ -8,7 +8,7 @@ let body = d3.select("body");
 
 function show_start() {
     
-    const t_time = 2000;//ponerlo en 2000
+    const t_time = 15;//ponerlo en 2000
     let div_start = d3.select("#start")
     let content = d3.select("#content").style("display","none");//hide everything
     
