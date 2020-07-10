@@ -140,6 +140,9 @@
   transform: translate(-50%, -50%);
  
 }
+#servicios{
+  padding-top:3%;
+}
 .nomServicios{
   color: #32363A;
   text-align: center;
@@ -162,6 +165,27 @@
   margin-right: auto;
   margin-top: -60px;
   
+}
+#img-procesos-judiciales{
+  width:70%;
+  height:100%;
+  padding-right: 8%;
+  margin-right: 8%;
+  float: right;
+}
+#img-estudio-titulos{
+  width: 60%;
+  height:150%;
+  transform: rotate(270deg);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -45px;
+  padding: 3%;
+  
+}
+.mas{
+  padding-top: 3%;
 }
 
 .carImg{
@@ -197,4 +221,3 @@ hr {
   margin-left: 3%;
   margin-right: 3%;
 }
-  

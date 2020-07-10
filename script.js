@@ -61,12 +61,24 @@ function transitionBack(p1,p2,p4,t_time,id){
                 .on("end",function(){
                 d3.select("#menuClick").remove();
                 d3.select("#content").style("display","block");
+                window.location.href=id;
+                
                 })
-                ;                        
+                ;
+                                    
     }
+
 btn_menu.on("click",function(){//display menu when clicked
-    let t_time = 1500;
+    window.location.href="#principal";
+    setTimeout(function(){
+        transitionFor()
+    },50);
     
+});
+function transitionFor(){
+    
+    window.location.href="#principal";
+    let t_time = 1500;
     let content = d3.select("#content")
     if(content.style("display")!="none"){
         content.style("display","none");//hide everything
@@ -82,12 +94,11 @@ btn_menu.on("click",function(){//display menu when clicked
 
 
         div_menu.append("svg:image")
-        .style("margin-left","10%")
-        .style("padding-top","3%")
+        .style("padding","10%")
         .style("opacity","1")
         .attr('width', "15px")
         .attr('height', "15px")
-        .attr("xlink:href", "media/menu.png")
+        .attr("xlink:href", "media/back.JPG")
         .on("mouseover",function(){
             d3.select(this).style("opacity",'0.4');          
         })
@@ -217,7 +228,9 @@ btn_menu.on("click",function(){//display menu when clicked
         */
     
     
-});
+
+}
+    
     
 
     
