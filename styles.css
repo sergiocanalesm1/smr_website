@@ -120,6 +120,13 @@
   color: #32363A;
 }
 
+.subtitle{
+  text-align: center;
+  color: #32363A;
+  font-size: 150%;
+  
+}
+
 .first{
   position: relative;
   overflow: hidden;
