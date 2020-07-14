@@ -119,7 +119,7 @@ function transitionFor(){
                 d3.select(this).style("opacity",'1');          
             })
             .on("click",function(){
-                transitionBack(p1,p2,p4,t_time,"#content");
+                transitionBack(p1,p2,p4,t_time,"#first");
             })
             ;
             
