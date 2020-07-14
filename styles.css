@@ -1,11 +1,5 @@
 
-.start{
-    background-color: #A7CE39 ;
-    padding-top: 20%;
-    padding-left: 10%;
-    padding-bottom: 20%;
-    padding-right: 10%;
-}
+
 .start img{
     display: block;
     margin-left: auto;
@@ -230,6 +224,7 @@
   height:110%;
   transform: rotate(270deg);
   margin-left: 2%;
+  margin-bottom: 5%;
   padding: 3%;
   
 }

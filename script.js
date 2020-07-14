@@ -11,7 +11,11 @@ function show_start() {
     const t_time = 1200;//ponerlo en 2000
     
     let content = d3.select("#content").style("display","none");//hide everything
-    
+    d3.select("body")
+        .style("background-color","#A7CE39")
+        .style("width","100%")
+        .style("height","100%")
+        ;
     let div_start = d3.select("#start");
 
     let img = div_start.append("img")
@@ -31,6 +35,8 @@ function show_start() {
             img.transition().duration(t_time).ease(d3.easeLinear).style("opacity", 0);
             quote.transition().duration(t_time).ease(d3.easeLinear).style("opacity",0);
             quote_name.transition().duration(t_time).ease(d3.easeLinear).style("opacity",0).on("end",function(){
+                d3.select("body")
+                    .style("background-color","white");
                 div_start.remove();
                 content.style("display","block");
             });
