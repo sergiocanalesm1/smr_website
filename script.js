@@ -8,12 +8,17 @@ let body = d3.select("body");
 
 function show_start() {
     
-    const t_time = 15;//ponerlo en 2000
-    let div_start = d3.select("#start")
+    const t_time = 1200;//ponerlo en 2000
+    
     let content = d3.select("#content").style("display","none");//hide everything
     
+    let div_start = d3.select("#start");
 
-    let img = div_start.append("img").attr("src", "media/logo.png").style("opacity", 0);
+    let img = div_start.append("img")
+                       .attr("src", "media/logo.png")
+                       .style("opacity", 0)
+                       //.style("margin-right","2%")
+                       ;
     let quote = div_start.append("p").text('"Talent wins games, but teamwork and intelligence wins championships"').attr("class","quote");
     let quote_name = div_start.append("p").text("Michael Jordan").attr("class","quote-name");
 

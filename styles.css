@@ -1,7 +1,6 @@
 
 .start{
     background-color: #A7CE39 ;
-    
     padding-top: 20%;
     padding-left: 10%;
     padding-bottom: 20%;
@@ -11,6 +10,7 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
+    width: 40%;
     border-style: solid;
     border-color: white;
     padding:10px;
