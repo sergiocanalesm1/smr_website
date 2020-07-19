@@ -8,7 +8,7 @@ let body = d3.select("body");
 
 function show_start() {
     
-    const t_time = 12;//ponerlo en 2000
+    const t_time = 1400;//ponerlo en 2000
     
     let content = d3.select("#content").style("display","none");//hide everything
     d3.select("body")
@@ -23,7 +23,7 @@ function show_start() {
                        .style("opacity", 0)
                        //.style("margin-right","2%")
                        ;
-    let quote = div_start.append("p").text('"Talent wins games, but teamwork and intelligence wins championships"').attr("class","quote");
+    let quote = div_start.append("p").text('"El Talento gana partidos, pero el trabajo en equipo y la inteligencia gana campeonatos"').attr("class","quote");
     let quote_name = div_start.append("p").text("Michael Jordan").attr("class","quote-name");
 
     //fade in

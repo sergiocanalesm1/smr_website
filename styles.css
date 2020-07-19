@@ -245,6 +245,8 @@
   width: 100%;
   height: 100%;
   margin-top: -10px;
+
+
 }
 .carImgOffset{
   margin-top: -65px;
@@ -253,18 +255,23 @@
   margin-top: 25px;
 }
 .car{
-  margin-left: 15%;
-  margin-right: 15%;
+ 
   width:400px;
   height:400px;
+  margin: 0;
+  margin-right: 6%;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 .acc{
   width:150%;
   margin-left: auto;
   margin-right: auto;  
 }
-.acc img{
-  border-radius: 50px;
+.accordion img{
+  border-radius: 50%;
 }
 .accordion h5{
   text-align: center;
@@ -273,7 +280,7 @@
   padding: 1%;
   padding-left:3%;
   background-color: white;
-  font-size: 150%;
+  font-size: 120%;
   color: #32363A;
   border-style: solid;  
   border-radius: 5%;
