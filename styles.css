@@ -105,6 +105,7 @@
   border-style: solid;
   border-radius: 2%;
   border-color: #A7CE39;
+  overflow: auto;
 }
 .info-contacto{
   margin-top: 5px;
@@ -285,6 +286,7 @@
   border-style: solid;  
   border-radius: 5%;
   border-color: #A7CE39;
+  overflow: auto;
 }
 hr {
   margin-left: 3%;
