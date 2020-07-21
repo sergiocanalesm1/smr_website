@@ -23,7 +23,7 @@ function show_start() {
                        .style("opacity", 0)
                        //.style("margin-right","2%")
                        ;
-    let quote = div_start.append("p").text('"El Talento gana partidos, pero el trabajo en equipo y la inteligencia gana campeonatos"').attr("class","quote");
+    let quote = div_start.append("p").text('"El talento gana partidos, pero el trabajo en equipo y la inteligencia gana campeonatos"').attr("class","quote");
     let quote_name = div_start.append("p").text("Michael Jordan").attr("class","quote-name");
 
     //fade in
