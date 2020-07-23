@@ -191,6 +191,11 @@
   transform: translateY(-50%);
 
 }
+.detail-proceso-xl{
+  text-align: center;
+  color: #32363A;
+  margin-top: 8%;
+}
 #img-asesoria{
   width:70%;
   height:90%;
