@@ -292,6 +292,12 @@
   border-color: #A7CE39;
   overflow: auto;
 }
+
+.terminos{
+  margin: auto;
+  text-align: center;
+}
+
 hr {
   margin-left: 3%;
   margin-right: 3%;
